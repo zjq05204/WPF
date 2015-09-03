@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{963195B2-F0BE-4C1B-B237-DFED72A81EEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myThunder</RootNamespace>
+    <AssemblyName>myThunder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>myThunderIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DownLoadItem.xaml.cs">
+      <DependentUpon>DownLoadItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="URLDownLoadWin.xaml.cs">
+      <DependentUpon>URLDownLoadWin.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DownLoadItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="URLDownLoadWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="myFunc_Class\myClass.cs" />
+    <Compile Include="myFunc_Class\myFunc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\myWPFCustomControls\myWPFCustomControls.csproj">
+      <Project>{4D5FABFB-086D-421F-9591-54B161A2AF30}</Project>
+      <Name>myWPFCustomControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\360Skin\Bd\background_mainwnd.png" />
+    <Resource Include="LocalResource\360Skin\Bd\enter.png" />
+    <Resource Include="LocalResource\360Skin\Bd\logo.png" />
+    <Resource Include="LocalResource\360Skin\Bd\mover.png" />
+    <Resource Include="LocalResource\360Skin\Button\mie.png" />
+    <Resource Include="LocalResource\360Skin\Button\mim.png" />
+    <Resource Include="LocalResource\360Skin\Button\min.png" />
+    <Resource Include="LocalResource\360Skin\Button\mme.png" />
+    <Resource Include="LocalResource\360Skin\Button\mmm.png" />
+    <Resource Include="LocalResource\360Skin\Button\mmn.png" />
+    <Resource Include="LocalResource\360Skin\Button\mse.png" />
+    <Resource Include="LocalResource\360Skin\Button\msm.png" />
+    <Resource Include="LocalResource\360Skin\Button\msn.png" />
+    <Resource Include="LocalResource\360Skin\Button\mxe.png" />
+    <Resource Include="LocalResource\360Skin\Button\mxm.png" />
+    <Resource Include="LocalResource\360Skin\Button\mxn.png" />
+    <Resource Include="LocalResource\360Skin\Button\ske.png" />
+    <Resource Include="LocalResource\360Skin\Button\skm.png" />
+    <Resource Include="LocalResource\360Skin\Button\skn.png" />
+    <Resource Include="LocalResource\360Skin\Button\xe.png" />
+    <Resource Include="LocalResource\360Skin\Button\xm.png" />
+    <Resource Include="LocalResource\360Skin\Button\xn.png" />
+    <Resource Include="LocalResource\360Skin\home.png" />
+    <Resource Include="LocalResource\360Skin\home2.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_dsmain.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_Examine.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_softmgr.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_SpeedupOpt.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_SysRepair.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_TraceCleaner.png" />
+    <Resource Include="LocalResource\360Skin\Icon\ico_VulRepair.png" />
+    <Resource Include="LocalResource\360Skin\ldxf.png" />
+    <Resource Include="LocalResource\360Skin\muma.png" />
+    <Resource Include="LocalResource\360Skin\tool\360保镖.png" />
+    <Resource Include="LocalResource\360Skin\tool\home.png" />
+    <Resource Include="LocalResource\360Skin\tool\云安全中心.png" />
+    <Resource Include="LocalResource\360Skin\tool\功能大全.png" />
+    <Resource Include="LocalResource\360Skin\tool\木马防火墙.png" />
+    <Resource Include="LocalResource\360Skin\tool\登陆账号.png" />
+    <Resource Include="LocalResource\360Skin\tool\网购先赔.png" />
+    <Resource Include="LocalResource\360Skin\xtql.png" />
+    <Resource Include="LocalResource\360Skin\xtxf.png" />
+    <Resource Include="LocalResource\360Skin\xtyh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\NewUrl.png" />
+    <Resource Include="LocalResource\ThunderIcon\全选.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\全选.png" />
+    <Resource Include="LocalResource\ThunderIcon\关闭.png" />
+    <Resource Include="LocalResource\ThunderIcon\图标大全 - 副本 %284%29.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\图标大全.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\垃圾箱.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\开始.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\开始.png" />
+    <Resource Include="LocalResource\ThunderIcon\搜索.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\搜索.png" />
+    <Resource Include="LocalResource\ThunderIcon\暂停.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\暂停.png" />
+    <Resource Include="LocalResource\ThunderIcon\相机.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\相机.png" />
+    <Resource Include="LocalResource\ThunderIcon\邮件.jpg" />
+    <Resource Include="LocalResource\ThunderIcon\邮件.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\新建.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\新建+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\新建白.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\开始白.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\关闭白.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\暂停白.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\头像.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\背景2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\取消白2.png" />
+    <Resource Include="LocalResource\ThunderIcon\取消黑2.png" />
+    <Resource Include="LocalResource\ThunderIcon\开始白2.png" />
+    <Resource Include="LocalResource\ThunderIcon\开始黑2.png" />
+    <Resource Include="LocalResource\ThunderIcon\新建白2.png" />
+    <Resource Include="LocalResource\ThunderIcon\新建黑2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\新建白2_mouse_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\开始白2_mouse_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\取消白2_mouse_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LocalResource\ThunderIcon\萨摩.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="myThunderIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,186 @@
+﻿<Window x:Class="myThunder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:myWPFCtrl="clr-namespace:myWPFCustomControls;assembly=myWPFCustomControls"
+        Title="MainWindow" Height="500" Width="700"
+        WindowStyle="None"
+        ResizeMode="NoResize"  
+        MouseMove="myf_DragWindow"
+        WindowStartupLocation="CenterScreen"        
+        x:Name="mainWin"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="LocalResource/ThunderIcon/背景2.jpg" />
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        
+        <!--第一行-->
+        <Grid x:Name="row1" Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="LocalResource/ThunderIcon/萨摩.png" Margin="4" />
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="scofiled" FontSize="13" Grid.Row="0" VerticalAlignment="Bottom" Foreground="White" />
+                    <Label Content="LV4" FontSize="12" Grid.Row="1" VerticalAlignment="Top" Foreground="White" />
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="30" />
+                    </Grid.ColumnDefinitions> 
+                    <myWPFCtrl:myImageButton Grid.Column="1" x:Name="Setting" Click="myf_ResizeWindow" >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mmn.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mmm.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mme.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>
+                    <myWPFCtrl:myImageButton Grid.Column="2" x:Name="ResizeWindow_min" Click="myf_ResizeWindow" >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/min.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mim.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mie.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>
+                    <myWPFCtrl:myImageButton Grid.Column="3" x:Name="ResizeWindow_mxn" Click="myf_ResizeWindow" >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mxn.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mxm.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/mxe.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>
+                    <myWPFCtrl:myImageButton Grid.Column="4" x:Name="ResizeWindow_xn" Click="myf_ResizeWindow" >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/xn.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/xm.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/360Skin/Button/xe.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>                    
+                </Grid>
+                <Grid Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <myWPFCtrl:myImageButton Grid.Column="0" x:Name="NewUrl" Click="myf_Task"  >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/新建白2.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/新建白2_mouse_over.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/新建白2.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>
+                    <myWPFCtrl:myImageButton Grid.Column="1" x:Name="Pause_Play" Click="myf_Task"  >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/开始白2.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/开始白2_mouse_over.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/开始白2.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>
+                    <myWPFCtrl:myImageButton Grid.Column="2" x:Name="Stop" Click="myf_Task"  >
+                        <myWPFCtrl:myImageButton.Background>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/取消白2.png" />
+                        </myWPFCtrl:myImageButton.Background>
+                        <myWPFCtrl:myImageButton.myMouseOverImage>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/取消白2_mouse_over.png" />
+                        </myWPFCtrl:myImageButton.myMouseOverImage>
+                        <myWPFCtrl:myImageButton.myPressedImage>
+                            <ImageBrush ImageSource="LocalResource/ThunderIcon/取消白2.png" />
+                        </myWPFCtrl:myImageButton.myPressedImage>
+                    </myWPFCtrl:myImageButton>
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+
+
+
+
+
+
+        <!--第二行-->
+        <myWPFCtrl:DazzleTabControl Grid.Row="1" TabStripPlacement="Left" Background="Transparent" >
+            <myWPFCtrl:DazzleTabItem Header="正在下载" Width="150" Foreground="White" >
+                <myWPFCtrl:DazzleTabItem.Background>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Icon/ico_dsmain.png" />
+                </myWPFCtrl:DazzleTabItem.Background>
+                <myWPFCtrl:DazzleTabItem.MyEnterBrush>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Bd/enter.png" />
+                </myWPFCtrl:DazzleTabItem.MyEnterBrush>
+                <Grid>
+                    <ListBox x:Name="ctrl_download_list" Background="Transparent" >
+
+                        
+                    </ListBox>
+                </Grid>
+            </myWPFCtrl:DazzleTabItem>
+            <myWPFCtrl:DazzleTabItem Header="已完成" Width="150" Foreground="White" >
+                <myWPFCtrl:DazzleTabItem.Background>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Icon/ico_examine.png" />
+                </myWPFCtrl:DazzleTabItem.Background>
+                <myWPFCtrl:DazzleTabItem.MyEnterBrush>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Bd/enter.png" />
+                </myWPFCtrl:DazzleTabItem.MyEnterBrush>                
+            </myWPFCtrl:DazzleTabItem>            
+        </myWPFCtrl:DazzleTabControl>
+    </Grid>
+
+
+</Window>

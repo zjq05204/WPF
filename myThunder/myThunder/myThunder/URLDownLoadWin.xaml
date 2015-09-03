@@ -1,0 +1,82 @@
+﻿<Window x:Class="myThunder.URLDownLoadWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:myWPFC="clr-namespace:myWPFCustomControls;assembly=myWPFCustomControls"
+        Title="URLDownLoadWin" Height="300" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseMove="myf_WinMove"
+        WindowStartupLocation="CenterScreen"
+        >
+        <Window.Background>
+        <ImageBrush ImageSource="LocalResource/ThunderIcon/背景2.jpg" />
+        </Window.Background>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1" Content="新建任务" Foreground="White" />
+            <myWPFC:myImageButton x:Name="Quit_btn" Grid.Column="3" Click="Quit_NewTask" >
+                <myWPFC:myImageButton.Background>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Button/xn.png" />
+                </myWPFC:myImageButton.Background>
+                <myWPFC:myImageButton.myMouseOverImage>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Button/xm.png" />
+                </myWPFC:myImageButton.myMouseOverImage>
+                <myWPFC:myImageButton.myPressedImage>
+                    <ImageBrush ImageSource="LocalResource/360Skin/Button/xe.png" />
+                </myWPFC:myImageButton.myPressedImage>
+            </myWPFC:myImageButton>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" >
+            <Label Content="下载链接" Foreground="White" VerticalAlignment="Bottom" />
+            <Label Content="(多个下载链接请换行)" Foreground="sc# 1,0.8,0.2,0.2" VerticalAlignment="Bottom" />
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <RichTextBox x:Name="ctrl_download" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="5" IsReadOnly="False" >
+                <RichTextBox.Background>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#00FFFFFF" />
+                        <GradientStop Color="#A0FFFFFF" />
+                    </LinearGradientBrush>
+                </RichTextBox.Background>
+            </RichTextBox>
+
+        </Grid>
+        
+        <Label Grid.Row="3" Content="下载完成后重命名" Foreground="White" VerticalAlignment="Bottom" />
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="80" />
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" x:Name="ctrl_RenameFile" Margin="3" Foreground="Black" >
+                <TextBox.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#00FFFFFF" />
+                        <GradientStop Color="#90FFFFFF" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Button Grid.Column="1" Content="打开文件" Margin="0,5,5,5" Click="myf_Select_download_file" />
+        </Grid>
+        <Button Grid.Row="5" Width="70" HorizontalAlignment="Right" Content="开始下载" Margin="8" Click="myf_StartDownload" />
+
+    </Grid>
+</Window>
